@@ -21,14 +21,10 @@ body{
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
-margin:0;
 padding-bottom:70px;
 }
 
-.navbar{
-background:rgba(17,24,39,.8);
-backdrop-filter:blur(10px);
-}
+.navbar{background:rgba(17,24,39,.8);backdrop-filter:blur(10px);}
 
 .hero{
 padding:120px 20px;
@@ -36,16 +32,8 @@ text-align:center;
 background:radial-gradient(circle at top,#1f2937,#020617);
 }
 
-.hero h1{
-font-size:clamp(32px,5vw,60px);
-font-weight:800;
-}
-
-.hero p{
-color:var(--muted);
-max-width:650px;
-margin:auto;
-}
+.hero h1{font-size:clamp(32px,5vw,60px);font-weight:800;}
+.hero p{color:var(--muted);max-width:650px;margin:auto;}
 
 .btn-main{
 background:var(--accent);
@@ -63,9 +51,7 @@ background:#16a34a;
 color:#000;
 }
 
-.section{
-padding:80px 20px;
-}
+.section{padding:80px 20px;}
 
 .card-box{
 background:var(--card);
@@ -81,11 +67,7 @@ transform:translateY(-8px);
 border-color:var(--accent);
 }
 
-.icon{
-font-size:32px;
-color:var(--accent);
-margin-bottom:10px;
-}
+.icon{font-size:32px;color:var(--accent);margin-bottom:10px;}
 
 .grid-3{
 display:grid;
@@ -107,17 +89,9 @@ border-radius:20px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-.stat-number{
-font-size:30px;
-font-weight:800;
-color:var(--accent);
-}
+.stat-number{font-size:30px;font-weight:800;color:var(--accent);}
 
-.step{
-display:flex;
-gap:15px;
-align-items:flex-start;
-}
+.step{display:flex;gap:15px;align-items:flex-start;}
 
 .step span{
 background:var(--accent);
@@ -185,7 +159,6 @@ color:white;
 border-radius:10px;
 padding:10px;
 width:100%;
-outline:none;
 }
 
 input::placeholder,
@@ -196,49 +169,30 @@ color:#9ca3af;
 textarea{
 min-height:120px;
 }
-
-@media(max-width:600px){
-.hero{
-padding:90px 20px;
-}
-
-.section{
-padding:60px 20px;
-}
-
-.whatsapp{
-bottom:90px;
-right:15px;
-}
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
 <div class="container">
 <a class="navbar-brand text-white fw-bold" href="#">GasPro</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Gas a domicilio sin fallas</h1>
 <p>Recarga de pipetas de gas rápida, segura y disponible en ciudades, municipios y corregimientos de Colombia.</p>
 
-<a href="https://wa.me/573166468602" class="btn btn-main mt-4">
+<a href="https://wa.me/573166468602" target="_blank" rel="noopener noreferrer" class="btn btn-main mt-4">
 <i class="bi bi-whatsapp"></i> Pedir ahora
 </a>
 </section>
 
-<!-- SERVICIOS -->
 <section class="section container">
 <h2 class="text-center mb-5">Servicios</h2>
 
 <div class="grid-3">
-
 <div class="card-box">
 <div class="icon"><i class="bi bi-house"></i></div>
 <h5>Hogar</h5>
@@ -256,16 +210,13 @@ right:15px;
 <h5>Express</h5>
 <p>Atención urgente cuando más lo necesitas.</p>
 </div>
-
 </div>
 </section>
 
-<!-- COMO FUNCIONA -->
 <section class="section container">
 <h2 class="text-center mb-5">¿Cómo funciona?</h2>
 
 <div class="grid-3">
-
 <div class="card-box step">
 <span>1</span>
 <div>
@@ -289,11 +240,9 @@ right:15px;
 <p>Recibes el gas en tu puerta.</p>
 </div>
 </div>
-
 </div>
 </section>
 
-<!-- COBERTURA -->
 <section class="section container text-center">
 <h2 class="mb-4">Cobertura</h2>
 <p style="max-width:700px;margin:auto;color:var(--muted)">
@@ -301,34 +250,15 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 </p>
 </section>
 
-<!-- STATS -->
 <section class="section container">
 <div class="grid-4">
-
-<div class="stats">
-<div class="stat-number">+5000</div>
-<p>Pedidos</p>
-</div>
-
-<div class="stats">
-<div class="stat-number">98%</div>
-<p>Satisfacción</p>
-</div>
-
-<div class="stats">
-<div class="stat-number">24/7</div>
-<p>Disponibilidad</p>
-</div>
-
-<div class="stats">
-<div class="stat-number">&lt;2h</div>
-<p>Entrega</p>
-</div>
-
+<div class="stats"><div class="stat-number">+5000</div><p>Pedidos</p></div>
+<div class="stats"><div class="stat-number">98%</div><p>Satisfacción</p></div>
+<div class="stats"><div class="stat-number">24/7</div><p>Disponibilidad</p></div>
+<div class="stats"><div class="stat-number">&lt;2h</div><p>Entrega</p></div>
 </div>
 </section>
 
-<!-- FORMULARIO -->
 <section class="section container">
 <h2 class="text-center mb-4">Solicitar servicio</h2>
 
@@ -345,12 +275,10 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 </button>
 </section>
 
-<!-- FAQ -->
 <section class="section container">
 <h2 class="text-center mb-4">Preguntas frecuentes</h2>
 
 <div class="grid-3">
-
 <div class="card-box">
 <h6>¿Cuánto tarda?</h6>
 <p>Entre 30 min y 2 horas.</p>
@@ -365,33 +293,28 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <h6>¿Es seguro?</h6>
 <p>Sí, trabajamos con cilindros certificados.</p>
 </div>
-
 </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
 <h2>Pide tu gas ahora</h2>
 <p>Rápido, seguro y sin perder tiempo</p>
 
-<a href="https://wa.me/573166468602" class="btn btn-dark mt-3">
+<a href="https://wa.me/573166468602" target="_blank" rel="noopener noreferrer" class="btn btn-dark mt-3">
 <i class="bi bi-whatsapp"></i> Contactar
 </a>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
 <p>© 2026 GasPro - Colombia</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/573166468602" class="whatsapp">
+<a href="https://wa.me/573166468602" target="_blank" rel="noopener noreferrer" class="whatsapp">
 <i class="bi bi-whatsapp"></i>
 </a>
 
-<!-- BOTÓN INFERIOR -->
 <div class="sticky-cta">
-<a href="https://wa.me/573166468602" class="btn btn-main">
+<a href="https://wa.me/573166468602" target="_blank" rel="noopener noreferrer" class="btn btn-main">
 <i class="bi bi-whatsapp"></i> Pedir gas ahora
 </a>
 </div>
@@ -422,7 +345,7 @@ function enviarWhatsApp() {
     }
 
     const url = "https://wa.me/573166468602?text=" + encodeURIComponent(mensaje);
-    window.location.href = url;
+    window.open(url, "_blank");
 }
 </script>
 
