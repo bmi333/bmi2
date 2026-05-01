@@ -21,6 +21,8 @@ body{
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
+margin:0;
+padding-bottom:70px;
 }
 
 .navbar{
@@ -53,6 +55,7 @@ border-radius:999px;
 font-weight:600;
 color:#000;
 text-decoration:none;
+display:inline-block;
 }
 
 .btn-main:hover{
@@ -126,6 +129,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-weight:700;
+flex-shrink:0;
 }
 
 .cta{
@@ -143,7 +147,7 @@ color:var(--muted);
 
 .whatsapp{
 position:fixed;
-bottom:75px;
+bottom:85px;
 right:20px;
 background:var(--accent);
 width:60px;
@@ -181,6 +185,7 @@ color:white;
 border-radius:10px;
 padding:10px;
 width:100%;
+outline:none;
 }
 
 input::placeholder,
@@ -188,6 +193,24 @@ textarea::placeholder{
 color:#9ca3af;
 }
 
+textarea{
+min-height:120px;
+}
+
+@media(max-width:600px){
+.hero{
+padding:90px 20px;
+}
+
+.section{
+padding:60px 20px;
+}
+
+.whatsapp{
+bottom:90px;
+right:15px;
+}
+}
 </style>
 </head>
 
@@ -204,7 +227,10 @@ color:#9ca3af;
 <section class="hero">
 <h1>Gas a domicilio sin fallas</h1>
 <p>Recarga de pipetas de gas rápida, segura y disponible en ciudades, municipios y corregimientos de Colombia.</p>
-<a href="https://api.whatsapp.com/send?phone=573166468602&text=Hola,%20quiero%20pedir%20una%20recarga%20de%20gas" target="_blank" rel="noopener noreferrer" class="btn btn-main mt-4">Pedir ahora</a>
+
+<a href="https://wa.me/573166468602" class="btn btn-main mt-4">
+<i class="bi bi-whatsapp"></i> Pedir ahora
+</a>
 </section>
 
 <!-- SERVICIOS -->
@@ -212,6 +238,7 @@ color:#9ca3af;
 <h2 class="text-center mb-5">Servicios</h2>
 
 <div class="grid-3">
+
 <div class="card-box">
 <div class="icon"><i class="bi bi-house"></i></div>
 <h5>Hogar</h5>
@@ -229,6 +256,7 @@ color:#9ca3af;
 <h5>Express</h5>
 <p>Atención urgente cuando más lo necesitas.</p>
 </div>
+
 </div>
 </section>
 
@@ -237,6 +265,7 @@ color:#9ca3af;
 <h2 class="text-center mb-5">¿Cómo funciona?</h2>
 
 <div class="grid-3">
+
 <div class="card-box step">
 <span>1</span>
 <div>
@@ -260,6 +289,7 @@ color:#9ca3af;
 <p>Recibes el gas en tu puerta.</p>
 </div>
 </div>
+
 </div>
 </section>
 
@@ -274,6 +304,7 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <!-- STATS -->
 <section class="section container">
 <div class="grid-4">
+
 <div class="stats">
 <div class="stat-number">+5000</div>
 <p>Pedidos</p>
@@ -293,6 +324,7 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <div class="stat-number">&lt;2h</div>
 <p>Entrega</p>
 </div>
+
 </div>
 </section>
 
@@ -308,7 +340,9 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 
 <textarea id="detalle" class="mt-3" placeholder="Detalle del pedido"></textarea>
 
-<button onclick="enviarWhatsApp()" class="btn btn-main mt-3">Enviar solicitud</button>
+<button onclick="enviarWhatsApp()" class="btn btn-main mt-3">
+<i class="bi bi-whatsapp"></i> Enviar solicitud
+</button>
 </section>
 
 <!-- FAQ -->
@@ -316,6 +350,7 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <h2 class="text-center mb-4">Preguntas frecuentes</h2>
 
 <div class="grid-3">
+
 <div class="card-box">
 <h6>¿Cuánto tarda?</h6>
 <p>Entre 30 min y 2 horas.</p>
@@ -330,6 +365,7 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <h6>¿Es seguro?</h6>
 <p>Sí, trabajamos con cilindros certificados.</p>
 </div>
+
 </div>
 </section>
 
@@ -337,7 +373,10 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 <section class="cta">
 <h2>Pide tu gas ahora</h2>
 <p>Rápido, seguro y sin perder tiempo</p>
-<a href="https://api.whatsapp.com/send?phone=573166468602&text=Hola,%20quiero%20pedir%20una%20recarga%20de%20gas" target="_blank" rel="noopener noreferrer" class="btn btn-dark mt-3">Contactar</a>
+
+<a href="https://wa.me/573166468602" class="btn btn-dark mt-3">
+<i class="bi bi-whatsapp"></i> Contactar
+</a>
 </section>
 
 <!-- FOOTER -->
@@ -346,13 +385,15 @@ Operamos en ciudades principales y también en municipios, corregimientos y zona
 </footer>
 
 <!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://api.whatsapp.com/send?phone=573166468602&text=Hola,%20quiero%20pedir%20una%20recarga%20de%20gas" target="_blank" rel="noopener noreferrer" class="whatsapp">
+<a href="https://wa.me/573166468602" class="whatsapp">
 <i class="bi bi-whatsapp"></i>
 </a>
 
 <!-- BOTÓN INFERIOR -->
 <div class="sticky-cta">
-<a href="https://api.whatsapp.com/send?phone=573166468602&text=Hola,%20quiero%20pedir%20una%20recarga%20de%20gas" target="_blank" rel="noopener noreferrer" class="btn btn-main">Pedir gas ahora</a>
+<a href="https://wa.me/573166468602" class="btn btn-main">
+<i class="bi bi-whatsapp"></i> Pedir gas ahora
+</a>
 </div>
 
 <script>
@@ -362,15 +403,26 @@ function enviarWhatsApp() {
     const ubicacion = document.getElementById("ubicacion").value.trim();
     const detalle = document.getElementById("detalle").value.trim();
 
-    const mensaje = `Hola, quiero solicitar una recarga de gas.%0A%0A` +
-                    `Nombre: ${encodeURIComponent(nombre)}%0A` +
-                    `Teléfono: ${encodeURIComponent(telefono)}%0A` +
-                    `Ubicación: ${encodeURIComponent(ubicacion)}%0A` +
-                    `Detalle: ${encodeURIComponent(detalle)}`;
+    let mensaje = "Hola, quiero solicitar una recarga de gas.";
 
-    const url = `https://api.whatsapp.com/send?phone=573166468602&text=${mensaje}`;
+    if(nombre !== "") {
+        mensaje += "\nNombre: " + nombre;
+    }
 
-    window.open(url, "_blank", "noopener,noreferrer");
+    if(telefono !== "") {
+        mensaje += "\nTeléfono: " + telefono;
+    }
+
+    if(ubicacion !== "") {
+        mensaje += "\nUbicación: " + ubicacion;
+    }
+
+    if(detalle !== "") {
+        mensaje += "\nDetalle: " + detalle;
+    }
+
+    const url = "https://wa.me/573166468602?text=" + encodeURIComponent(mensaje);
+    window.location.href = url;
 }
 </script>
 
